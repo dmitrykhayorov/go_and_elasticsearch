@@ -1,0 +1,33 @@
+{{define "count"}}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Places</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<h5>Total: {{.}}</h5>
+{{end}}
+{{define "places"}}
+<ul>
+    {{range .}}
+    <li>
+        <div>{{ .Name}}</div>
+        <div>{{ .Address}}</div>
+        <div>{{ .Phone}}</div>
+    </li>
+    {{end}}
+</ul>
+{{end}}
+{{define "pages"}}
+    {{range .}}
+<a href="{{ .Ref}}">{{.Name}}</a>
+{{end}}
+
+</body>
+</html>
+{{end}}

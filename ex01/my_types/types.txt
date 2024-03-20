@@ -1,0 +1,46 @@
+//package my_types
+//
+//type Place struct {
+//	Id       int    `json:"ID"`
+//	Name     string `json:"Name"`
+//	Address  string `json:"Address"`
+//	Phone    string `json:"Phone"`
+//	Location struct {
+//		Lon float64 `json:"Longitude"`
+//		Lat float64 `json:"Latitude"`
+//	} `json:"Location"`
+//}
+//
+//type SearchRes struct {
+//	Aggregations struct {
+//		TypesCount map[string]int `json:"types_count"`
+//	} `json:"aggregations"`
+//	Hits Hits `json:"hits"`
+//}
+//
+//type Hits struct {
+//	Total struct {
+//		Value    int    `json:"value"`
+//		Relation string `json:"relation"`
+//	} `json:"total"`
+//	//MaxScore float64 `json:"max_score"`
+//	Hit []*Hit `json:"hits"`
+//}
+//
+//type Hit struct {
+//	Source Place `json:"_source"`
+//}
+//
+//type PageList struct {
+//	Name string
+//	Ref  string
+//}
+//
+//type Recommendations struct {
+//	Name   string  `json:"name"`
+//	Places []Place `json:"places"`
+//}
+//
+//func (r *Recommendations) GetPlaces(limit int, offset int) ([]Place, int, error) {
+//
+//}
