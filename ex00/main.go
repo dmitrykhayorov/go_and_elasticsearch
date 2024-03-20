@@ -116,18 +116,7 @@ func main() {
 
 	_ = json.Unmarshal(rawData, &places)
 
-	//places_2 := make([]Place_2, len(places))
-	//for i, val := range places {
-	//	places_2[i].Name = val.Name
-	//	places_2[i].Address = val.Address
-	//	places_2[i].Location.Lat = val.Location.Lat
-	//	places_2[i].Location.Lon = val.Location.Lon
-	//	places_2[i].Phone = val.Phone
-	//	places_2[i].Id = val.Id
-	//}
-	//
-	//data, _ := json.MarshalIndent(places_2, "", "    ")
-	//os.WriteFile("data_2.json", data, 0664)
+	
 	es, _ := elasticsearch.NewClient(cfg)
 	createIndex(es, mapping)
 	loadData(es, places)
